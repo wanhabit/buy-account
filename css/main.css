@@ -7,10 +7,12 @@
   font-family: product-bold;
   src: url(font/product-sans/ProductSans-Bold.ttf);
 }
+
 @font-face {
   font-family: product-medium;
   src: url(font/product-sans/ProductSans-Medium.ttf);
 }
+
 @font-face {
   font-family: product-black;
   src: url(font/product-sans/ProductSans-Black.ttf);
@@ -20,14 +22,17 @@
   font-family: apple-bold;
   src: url(font/apple/SFNSDisplay-Bold.otf);
 }
+
 @font-face {
   font-family: apple-semibold;
   src: url(font/apple/SFNSDisplay-Semibold.otf);
 }
+
 @font-face {
   font-family: apple-medium;
   src: url(font/apple/SFNSDisplay-Medium.otf);
 }
+
 @font-face {
   font-family: apple-regular;
   src: url(font/apple/SFNSDisplay-Regular.otf);
@@ -73,7 +78,7 @@
 .link-container {
   display: flex;
   justify-content: center;
-  padding-bottom: 90px;
+  padding-bottom: 10px;
 }
 
 .gridContainer {
@@ -82,42 +87,86 @@
   column-gap: 50px;
 }
 
+.line-container {
+  text-align: center;
+  padding: 65px 0;
+}
+
+.line-middle {
+  display: inline-block;
+  height: 2px;
+  background-color: #f5f5f5;
+  width: 50%;
+}
+
+.title-header2 {
+  text-align: center;
+  padding: 0 10px 45px;
+}
+
+.link-container-single {
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.link-container-single .link img {
+  height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 166px;
+  box-sizing: border-box;
   text-align: center;
   background-color: #f5f5f5;
   text-decoration: none;
-  padding: 15px 17px;
+  padding: 15px 10px;
   border: solid #f5f5f5 1px;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 24px;
   font-family: apple-bold;
   color: #101010;
   position: relative;
-  transition: border-radius 0.15s,
-    background-color 0.15s,
-    filter 0.15s,
-    box-shadow 0.15s,
-    border-color 0.15s;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-radius 0.3s ease,
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
 }
 
 .link:hover {
-  border-radius: 28px;
-  background-color: rgba(195, 195, 195, 0.585);
-  filter: invert(100%);
-  border-color: #141414;
-  box-shadow: 0px 1px 80px -2px rgba(0,0,0,0.45);
--webkit-box-shadow: 0px 1px 80px -2px rgba(0,0,0,0.45);
--moz-box-shadow: 0px 1px 80px -2px rgba(0,0,0,0.45);
+  transform: scale(1.06) translateY(-4px);
+  border-radius: 18px;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15),
+    0 0 60px rgba(255, 255, 255, 0.08);
+}
+
+.link:active {
+  transform: scale(0.97) translateY(0);
+  transition: transform 0.1s ease;
+}
+
+.link:hover img {
+  transform: scale(1.05);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .link img {
   height: 90px;
   margin-bottom: 10px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .telegram-contain {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 150px;
 }
 
 .telegram-contain img {
@@ -137,9 +186,9 @@
 .line-footer {
   background-color: #f5f5f5;
   height: 5pt;
-  box-shadow: -1px -179px 400px 60px rgba(255,255,255,0.73);
-  -webkit-box-shadow: -1px -179px 400px 60px rgba(255,255,255,0.73);
-  -moz-box-shadow: -1px -179px 400px 60px rgba(255,255,255,0.73);
+  box-shadow: -1px -179px 400px 60px rgba(255, 255, 255, 0.73);
+  -webkit-box-shadow: -1px -179px 400px 60px rgba(255, 255, 255, 0.73);
+  -moz-box-shadow: -1px -179px 400px 60px rgba(255, 255, 255, 0.73);
 }
 
 .contain-back {
@@ -184,8 +233,10 @@
   }
 
   .link {
-    padding: 15px 15px;
-    font-size: 23px;
+    width: 120px;
+    height: 140px;
+    padding: 15px 10px;
+    font-size: 21px;
   }
 
   .link img {
@@ -195,6 +246,5 @@
   .c-wan {
     font-family: apple-regular;
     font-size: 8px;
-  } 
+  }
 }
-
